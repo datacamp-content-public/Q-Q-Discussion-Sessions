@@ -43,7 +43,7 @@ xp: 100
 
 `@pre_exercise_code`
 ```{r}
-
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
 ```
 
 ***
@@ -55,7 +55,7 @@ xp: 35
 ```
 
 `@instructions`
-Load the file `https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv` into a data.frame called `stroop_results`
+Load the file (the link is in the variable `file_uri`)  into a data.frame called `stroop_results`
 
 `@hint`
 
@@ -67,7 +67,7 @@ stroop_results <- # your code here
 
 `@solution`
 ```{r}
-stroop_results <- read.csv('stroop.csv')
+stroop_results <- read.csv(file_uri)
 ```
 
 `@sct`
