@@ -142,5 +142,7 @@ total <- sum(stroop_results)
 
 `@sct`
 ```{r}
-
+ex() %>%
+	check_object('total') %>%
+	check_equal()
 ```
