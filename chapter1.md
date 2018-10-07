@@ -1,5 +1,5 @@
 ---
-title: 'Template Chapter 1'
+title: 'Descriptive Statistics'
 description: 'This is a template chapter.'
 ---
 
@@ -13,19 +13,16 @@ xp: 100
 skills: 1
 ```
 
-This is the Context. It should help provide students with the background information needed.
-The Instructions that follow should be in bullet point form with clear guidance for what is expected.
+This is not really a Datacamp exercise. We will run a short experiment and analyze the sample we collect.
 
 `@instructions`
-- Instruction 1
-- Instruction 2
-- Instruction 3
+- [Participate](http://www.onlinestrooptest.com/stroop_effect_test.php) in an online Stroop test.
+- Open the [Google sheet](https://docs.google.com/spreadsheets/d/1IsyrFoKTCBpAOPnkdrwmHZnse6psvvZ1HCXyIaV50Jo/edit?usp=sharing) we will use to track you results.
+- Copy the two times you got (congruent and incongruent) into appropriate columns.
+- Don't forget to put your name there as well. (you can use a nickname, just don't leave the field empty)
 
 `@hint`
-- Here is the hint for this setup problem. 
-- It should get students 50% of the way to the correct answer.
-- So don't provide the answer, but don't just reiterate the instructions.
-- Typically one hint per instruction is a sensible amount.
+- RTFM
 
 `@pre_exercise_code`
 ```{r}
@@ -47,14 +44,39 @@ The Instructions that follow should be in bullet point form with clear guidance 
 
 `@solution`
 ```{r}
-# Answer goes here
-# Make sure to match the comments with your sample code
-# to help students see the differences from solution
-# to given.
+
 ```
 
 `@sct`
 ```{r}
 # Update this to something more informative.
-success_msg("Some praise! Then reinforce a learning objective from the exercise.")
+success_msg("Thank you for particpating")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: PureMultipleChoiceExercise
+key: f95c495704
+xp: 50
+```
+
+- [Participate](http://www.onlinestrooptest.com/stroop_effect_test.php) in an online Stroop test.
+- Open the [Google sheet](https://docs.google.com/spreadsheets/d/1IsyrFoKTCBpAOPnkdrwmHZnse6psvvZ1HCXyIaV50Jo/edit?usp=sharing) we will use to track you results.
+- Copy the two times you got (congruent and incongruent) into appropriate columns.
+- Don't forget to put your name there as well. (you can use a nickname, just don't leave the field empty)
+
+Have you managed to do the test and write down the results?
+
+`@hint`
+
+
+`@possible_answers`
+- Yes
+- [No]
+
+`@feedback`
+- Great! Thank you!
+- Don't sweat it. We probably got enough samples anyways.
