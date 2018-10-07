@@ -96,11 +96,13 @@ Find out and save this number as `N`. Use either `length` on a column or `nrows`
 
 `@sample_code`
 ```{r}
+stroop_results <- read.csv(file_uri)
 N <- # your code here
 ```
 
 `@solution`
 ```{r}
+stroop_results <- read.csv(file_uri)
 N <- nrows(stroop_results)
 ```
 
@@ -132,11 +134,15 @@ Use the `sum` function. Save it as `total`.
 
 `@sample_code`
 ```{r}
+stroop_results <- read.csv(file_uri)
+N <- nrows(stroop_results)
 total <- # your code here
 ```
 
 `@solution`
 ```{r}
+stroop_results <- read.csv(file_uri)
+N <- nrows(stroop_results)
 total <- sum(stroop_results$congruent)
 ```
 
