@@ -72,9 +72,9 @@ stroop_results <- read.csv(file_uri)
 
 `@sct`
 ```{r}
-ex() %>% 
-	check_object('stroop_results') %>% 
-	check_equal()
+# ex() %>% 
+# 	check_object('stroop_results') %>% 
+# 	check_equal()
 success_msg("Great start! Now that we loaded the results, let's start describing them")
 ```
 
