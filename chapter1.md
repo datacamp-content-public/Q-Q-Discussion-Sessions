@@ -96,8 +96,40 @@ file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e7
 
 ```yaml
 type: NormalExercise
+key: d5571210a6
+xp: 20
+```
+
+`@instructions`
+To get a quick glimpse at what a data.frame looks like, use function `head`
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+stroop_results <- read.csv(file_uri)
+# N <- nrow(stroop_results)
+# stroop_results$effect = stroop_results$incongruent - stroop_results$congruent
+# Your code here
+```
+
+`@solution`
+```{r}
+head(stroop_results)
+```
+
+`@sct`
+```{r}
+# ex() %>% check_function('head')
+```
+
+***
+
+```yaml
+type: NormalExercise
 key: 1a49c22b4f
-xp: 35
+xp: 20
 ```
 
 `@instructions`
@@ -129,7 +161,7 @@ success_msg("Great start! Now that we loaded the results, let's start describing
 ```yaml
 type: NormalExercise
 key: a044d20097
-xp: 35
+xp: 20
 ```
 
 `@instructions`
@@ -165,7 +197,7 @@ ex() %>% check_object('N') %>% check_equal()
 ```yaml
 type: NormalExercise
 key: d7810db233
-xp: 30
+xp: 20
 ```
 
 `@instructions`
@@ -186,11 +218,46 @@ total <- # your code here
 `@solution`
 ```{r}
 stroop_results <- read.csv(file_uri)
-N <- nrows(stroop_results)
-# total <- sum(stroop_results$congruent)
+N <- nrow(stroop_results)
+total <- sum(stroop_results$congruent)
 ```
 
 `@sct`
 ```{r}
+ex() %>%
+	check_object('total') %>%
+	check_equal()
+```
 
+***
+
+```yaml
+type: NormalExercise
+key: 24dc61f90d
+xp: 20
+```
+
+`@instructions`
+Add column `effect` to `stroop_results` that is the difference between RT in the incongruent and the congruent solution.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+stroop_results <- read.csv(file_uri)
+N <- nrow(stroop_results)
+# your code here
+```
+
+`@solution`
+```{r}
+stroop_results <- read.csv(file_uri)
+N <- nrow(stroop_results)
+stroop_results$effect = stroop_results$incongruent - stroop_results$congruent
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('stroop_results') %>% check_equal()
 ```
