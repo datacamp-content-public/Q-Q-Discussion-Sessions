@@ -97,7 +97,7 @@ file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e7
 ```yaml
 type: NormalExercise
 key: 1a49c22b4f
-xp: 35
+xp: 100
 ```
 
 `@instructions`
@@ -118,82 +118,8 @@ stroop_results <- read.csv(file_uri)
 
 `@sct`
 ```{r}
-# ex() %>% 
-# 	check_object('stroop_results') %>% 
-# 	check_equal()
+ex() %>% 
+ 	check_object('stroop_results') %>% 
+	check_equal()
 success_msg("Great start! Now that we loaded the results, let's start describing them")
-```
-
-***
-
-```yaml
-type: NormalExercise
-key: a1759e5da5
-xp: 35
-```
-
-`@instructions`
-I don't know how many people actually did the test and added the results. 
-
-Find out and save this number as `N`. Use either `length` on a column or `nrows` on the whole data.frame.
-
-`@hint`
-
-
-`@sample_code`
-```{r}
-stroop_results <- read.csv(file_uri)
-N <- # your code here
-```
-
-`@solution`
-```{r}
-stroop_results <- read.csv(file_uri)
-N <- nrows(stroop_results)
-```
-
-`@sct`
-```{r}
-# ex() %>% check_or(
-#     check_function(., 'length'),
-#     check_function(., 'nrows'))
-# ex() %>% check_object('N') %>% check_equal()
-
-```
-
-***
-
-```yaml
-type: NormalExercise
-key: dcf5e98e4f
-xp: 30
-```
-
-`@instructions`
-Find the total time students spent on the congruent solution. 
-
-Use the `sum` function. Save it as `total`.
-
-`@hint`
-
-
-`@sample_code`
-```{r}
-stroop_results <- read.csv(file_uri)
-N <- nrows(stroop_results)
-total <- # your code here
-```
-
-`@solution`
-```{r}
-stroop_results <- read.csv(file_uri)
-N <- nrows(stroop_results)
-total <- sum(stroop_results$congruent)
-```
-
-`@sct`
-```{r}
-# ex() %>%
-# 	check_object('total') %>%
-# 	check_equal()
 ```
