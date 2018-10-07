@@ -101,7 +101,7 @@ N <- # your code here
 
 `@solution`
 ```{r}
-N <- nrows(stroop_restults)
+N <- nrows(stroop_results)
 ```
 
 `@sct`
