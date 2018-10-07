@@ -113,7 +113,7 @@ stroop_results <- # your code here
 
 `@solution`
 ```{r}
-stroop_results <- 1 # read.csv(file_uri)
+stroop_results <- read.csv(file_uri)
 ```
 
 `@sct`
