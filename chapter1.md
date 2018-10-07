@@ -97,7 +97,7 @@ file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e7
 ```yaml
 type: NormalExercise
 key: 1a49c22b4f
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -129,7 +129,7 @@ success_msg("Great start! Now that we loaded the results, let's start describing
 ```yaml
 type: NormalExercise
 key: a044d20097
-xp: 50
+xp: 35
 ```
 
 `@instructions`
@@ -158,4 +158,39 @@ N <- nrow(stroop_results)
 #     check_function(., 'length'),
 #     check_function(., 'nrow'))
 ex() %>% check_object('N') %>% check_equal()
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: d7810db233
+xp: 30
+```
+
+`@instructions`
+Find the total time students spent on the congruent solution. 
+
+Use the `sum` function. Save it as `total`.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+stroop_results <- read.csv(file_uri)
+N <- nrow(stroop_results)
+total <- # your code here
+```
+
+`@solution`
+```{r}
+stroop_results <- read.csv(file_uri)
+N <- nrow(stroop_results)
+total <- sum(stroop_results$congruent)
+```
+
+`@sct`
+```{r}
+
 ```
