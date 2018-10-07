@@ -135,24 +135,27 @@ xp: 50
 `@instructions`
 I don't know how many people actually did the test and added the results. 
 
-Find out and save this number as `N`. Use either `length` on a column or `nrows` on the whole data.frame.
+Find out and save this number as `N`. Use either `length` on a column or `nrow` on the whole data.frame.
 
 `@hint`
 
 
 `@sample_code`
 ```{r}
-# stroop_results <- read.csv(file_uri)
+stroop_results <- read.csv(file_uri)
 N <- # your code here
 ```
 
 `@solution`
 ```{r}
-# stroop_results <- read.csv(file_uri)
-N <- 1 # nrows(stroop_results)
+stroop_results <- read.csv(file_uri)
+N <- nrow(stroop_results)
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% check_or(
+    check_function(., 'length'),
+    check_function(., 'nrow'))
+ex() %>% check_object('N') %>% check_equal()
 ```
