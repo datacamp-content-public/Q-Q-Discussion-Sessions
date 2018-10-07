@@ -51,7 +51,7 @@ file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e7
 ```yaml
 type: NormalExercise
 key: 1a49c22b4f
-xp: 25
+xp: 35
 ```
 
 `@instructions`
@@ -82,37 +82,8 @@ success_msg("Great start! Now that we loaded the results, let's start describing
 
 ```yaml
 type: NormalExercise
-key: b472943294
-xp: 25
-```
-
-`@instructions`
-
-
-`@hint`
-
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-
-```
-
-`@sct`
-```{r}
-
-```
-
-***
-
-```yaml
-type: NormalExercise
 key: a1759e5da5
-xp: 25
+xp: 35
 ```
 
 `@instructions`
@@ -148,7 +119,7 @@ ex() %>% check_correct(
 ```yaml
 type: NormalExercise
 key: dcf5e98e4f
-xp: 25
+xp: 30
 ```
 
 `@instructions`
