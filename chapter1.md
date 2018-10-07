@@ -151,3 +151,49 @@ total <- sum(stroop_results$congruent)
 # 	check_object('total') %>%
 # 	check_equal()
 ```
+
+---
+
+## test
+
+```yaml
+type: TabExercise
+key: a3e6ff5390
+xp: 100
+```
+
+
+
+`@pre_exercise_code`
+```{r}
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 5717d3cfea
+xp: 100
+```
+
+`@instructions`
+a
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+x <- read.csv(file_uri)
+```
+
+`@sct`
+```{r}
+
+```
