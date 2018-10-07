@@ -111,7 +111,7 @@ N <- nrows(stroop_results)
 ex() %>% check_or(
     check_function(., 'length'),
     check_function(., 'nrows'))
-ex() %>% check_object('N') %>% check_equal()
+# ex() %>% check_object('N') %>% check_equal()
 
 ```
 
