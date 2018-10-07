@@ -74,8 +74,8 @@ Have you managed to do the test and write down the results?
 
 
 `@possible_answers`
-- Yes
-- [No]
+- [Yes]
+- No
 
 `@feedback`
 - Great! Thank you!
