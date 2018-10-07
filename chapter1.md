@@ -147,7 +147,7 @@ total <- sum(stroop_results$congruent)
 
 `@sct`
 ```{r}
-ex() %>%
-	check_object('total') %>%
-	check_equal()
+# ex() %>%
+# 	check_object('total') %>%
+# 	check_equal()
 ```
