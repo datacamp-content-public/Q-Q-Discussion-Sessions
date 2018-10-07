@@ -137,8 +137,8 @@ N <- nrows(stroop_restults)
 ```{r}
 ex() %>% check_correct(
   ex() %>% check_or(
-    check_function('length'),
-    check_function('nrows')),
+    check_function(., 'length'),
+    check_function(., 'nrows')),
   check_object('N') %>% check_equal()
 )
 ```
