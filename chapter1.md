@@ -28,3 +28,88 @@ Have you managed to do the test and write down the results?
 `@feedback`
 - Great! Thank you!
 - Don't sweat it. We probably got enough samples anyways.
+
+---
+
+## Descriptive statistic by hand
+
+```yaml
+type: TabExercise
+key: 508a5ad42d
+xp: 100
+```
+
+
+
+`@pre_exercise_code`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: 1a49c22b4f
+xp: 50
+```
+
+`@instructions`
+Load the file `stroop.csv` into a data.frame called `stroop_results`
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+stroop_results <- # your code here
+```
+
+`@solution`
+```{r}
+stroop_results <- read.csv('stroop.csv')
+```
+
+`@sct`
+```{r}
+ex() %>% 
+	check_object('stroop_results') %>% 
+	check_equal()
+success_msg("Great start! Now that we loaded the results, let's start describing them")
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: a1759e5da5
+xp: 50
+```
+
+`@instructions`
+I don't know how many people actually did the test and added the results. 
+
+Find out and save this number as `N`. Use either `length` on a column or `nrows` on the whole data.frame.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+N <- # your code here
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+ex() %>% check_correct(
+  check_or(
+    check_function('length'),
+    check_function('nrows')),
+  check_object('N') %>% check_equal()
+)
+```
