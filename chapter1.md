@@ -50,8 +50,70 @@ xp: 100
 
 ```yaml
 type: NormalExercise
+key: b00f70cc50
+xp: 25
+```
+
+`@instructions`
+Do nothing
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+
+```
+
+`@sct`
+```{r}
+
+```
+
+***
+
+```yaml
+type: NormalExercise
+key: dcf5e98e4f
+xp: 25
+```
+
+`@instructions`
+Find the total time students spent on the congruent solution. 
+
+Use the `sum` function. Save it as `total`.
+
+`@hint`
+
+
+`@sample_code`
+```{r}
+total <- # your code here
+```
+
+`@solution`
+```{r}
+total <- sum(stroop_results)
+```
+
+`@sct`
+```{r}
+ex() %>%
+	check_object('total') %>%
+	check_equal()
+```
+
+***
+
+```yaml
+type: NormalExercise
 key: 1a49c22b4f
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -83,7 +145,7 @@ success_msg("Great start! Now that we loaded the results, let's start describing
 ```yaml
 type: NormalExercise
 key: a1759e5da5
-xp: 35
+xp: 25
 ```
 
 `@instructions`
@@ -112,37 +174,4 @@ ex() %>% check_correct(
     check_function('nrows')),
   check_object('N') %>% check_equal()
 )
-```
-
-***
-
-```yaml
-type: NormalExercise
-key: dcf5e98e4f
-xp: 30
-```
-
-`@instructions`
-Find the total time students spent on the congruent solution. 
-
-Use the `sum` function. Save it as `total`.
-
-`@hint`
-
-
-`@sample_code`
-```{r}
-total <- # your code here
-```
-
-`@solution`
-```{r}
-total <- sum(stroop_results)
-```
-
-`@sct`
-```{r}
-ex() %>%
-	check_object('total') %>%
-	check_equal()
 ```
