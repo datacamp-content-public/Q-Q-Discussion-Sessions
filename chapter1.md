@@ -101,7 +101,7 @@ total <- # your code here
 
 `@solution`
 ```{r}
-total <- sum(stroop_results)
+total <- sum(stroop_results$name)
 ```
 
 `@sct`
