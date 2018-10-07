@@ -187,7 +187,7 @@ total <- # your code here
 ```{r}
 stroop_results <- read.csv(file_uri)
 N <- nrows(stroop_results)
-total <- sum(stroop_results$congruent)
+# total <- sum(stroop_results$congruent)
 ```
 
 `@sct`
