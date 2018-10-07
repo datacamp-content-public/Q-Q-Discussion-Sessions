@@ -50,29 +50,32 @@ xp: 100
 
 ```yaml
 type: NormalExercise
-key: b00f70cc50
-xp: 25
+key: 1a49c22b4f
+xp: 35
 ```
 
 `@instructions`
-Do nothing
+Load the file `https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv` into a data.frame called `stroop_results`
 
 `@hint`
 
 
 `@sample_code`
 ```{r}
-
+stroop_results <- # your code here
 ```
 
 `@solution`
 ```{r}
-
+stroop_results <- read.csv('stroop.csv')
 ```
 
 `@sct`
 ```{r}
-
+ex() %>% 
+	check_object('stroop_results') %>% 
+	check_equal()
+success_msg("Great start! Now that we loaded the results, let's start describing them")
 ```
 
 ***
@@ -80,7 +83,7 @@ Do nothing
 ```yaml
 type: NormalExercise
 key: dcf5e98e4f
-xp: 25
+xp: 35
 ```
 
 `@instructions`
@@ -112,40 +115,8 @@ ex() %>%
 
 ```yaml
 type: NormalExercise
-key: 1a49c22b4f
-xp: 25
-```
-
-`@instructions`
-Load the file `stroop.csv` into a data.frame called `stroop_results`
-
-`@hint`
-
-
-`@sample_code`
-```{r}
-stroop_results <- # your code here
-```
-
-`@solution`
-```{r}
-stroop_results <- read.csv('stroop.csv')
-```
-
-`@sct`
-```{r}
-ex() %>% 
-	check_object('stroop_results') %>% 
-	check_equal()
-success_msg("Great start! Now that we loaded the results, let's start describing them")
-```
-
-***
-
-```yaml
-type: NormalExercise
 key: a1759e5da5
-xp: 25
+xp: 30
 ```
 
 `@instructions`
