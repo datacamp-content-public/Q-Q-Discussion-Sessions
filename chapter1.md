@@ -31,52 +31,6 @@ Have you managed to do the test and write down the results?
 
 ---
 
-## test
-
-```yaml
-type: TabExercise
-key: a3e6ff5390
-xp: 100
-```
-
-
-
-`@pre_exercise_code`
-```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
-```
-
-***
-
-```yaml
-type: NormalExercise
-key: 5717d3cfea
-xp: 100
-```
-
-`@instructions`
-a
-
-`@hint`
-
-
-`@sample_code`
-```{r}
-
-```
-
-`@solution`
-```{r}
-x <- read.csv(file_uri)
-```
-
-`@sct`
-```{r}
-
-```
-
----
-
 ## Descriptive statistic by hand - preparation
 
 ```yaml
@@ -450,7 +404,7 @@ m <- 0.5 * (effects_sorted[floor((N + 1)/2)] + effects_sorted[ceiling((N + 1)/2)
 
 ---
 
-## Descriptive statistics - built-in functions
+## Sample mean
 
 ```yaml
 type: NormalExercise
@@ -461,13 +415,7 @@ xp: 100
 Now that we understand how to calculate sample estimates by hand, let's learn how to do it using builtin functions.
 
 `@instructions`
-Calculate:
-
-1. `mu` - sample mean, use `mean` 
-3. `m` - sample median, use 'median'
-5. `sigma2` - sample variance, use `sd`, then square it
-7. `q1` - such a Stroop effect from the sample that 25% of participants have a smaller effect, use `quantile`
-9. `p` - ratio of people whose effect is less or equal to the estimate of the expected value, use `ecdf`. This function returns a function that you can then actually apply to the estimate.
+Calculate `mu` - sample mean, use `mean` 
 
 The effects are in the vector `effects`.
 
@@ -484,28 +432,261 @@ effects = stroop_results$incongruent - stroop_results$congruent
 `@sample_code`
 ```{r}
 mu <- # your code here
+```
+
+`@solution`
+```{r}
+mu <- mean(effects)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object(., 'mu') %>% check_equal()
+```
+
+---
+
+## Sample median
+
+```yaml
+type: NormalExercise
+key: 72faf2f930
+xp: 100
+```
+
+Now that we understand how to calculate sample estimates by hand, let's learn how to do it using builtin functions.
+
+`@instructions`
+Calculate `m` - sample median, use 'median'
+
+The effects are in the vector `effects`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
+stroop_results <- read.csv(file_uri)
+effects = stroop_results$incongruent - stroop_results$congruent
+```
+
+`@sample_code`
+```{r}
 m <- # your code here
+```
+
+`@solution`
+```{r}
+m <- median(effects)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object(., 'm') %>% check_equal()
+```
+
+---
+
+## Sample variance
+
+```yaml
+type: NormalExercise
+key: 717fb48784
+xp: 100
+```
+
+Now that we understand how to calculate sample estimates by hand, let's learn how to do it using builtin functions.
+
+`@instructions`
+Calculate `sigma2` - sample variance, use `sd`, then square it
+
+The effects are in the vector `effects`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
+stroop_results <- read.csv(file_uri)
+effects = stroop_results$incongruent - stroop_results$congruent
+```
+
+`@sample_code`
+```{r}
 sigma2 <- # your code here
+```
+
+`@solution`
+```{r}
+sigma2 <- sd(effects)^2
+```
+
+`@sct`
+```{r}
+ex() %>% check_object(., 'sigma2') %>% check_equal()
+```
+
+---
+
+## Empirical quantile function
+
+```yaml
+type: NormalExercise
+key: 6d96a34079
+xp: 100
+```
+
+Now that we understand how to calculate sample estimates by hand, let's learn how to do it using builtin functions.
+
+`@instructions`
+Calculate: `q1` - such a Stroop effect from the sample that 25% of participants have a smaller effect, use `quantile`
+
+The effects are in the vector `effects`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
+stroop_results <- read.csv(file_uri)
+effects = stroop_results$incongruent - stroop_results$congruent
+```
+
+`@sample_code`
+```{r}
 q1 <- # your code here
+```
+
+`@solution`
+```{r}
+q1 <- quantile(effects, 0.25)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('q1') %>% check_equal()
+```
+
+---
+
+## Empirical CDF
+
+```yaml
+type: NormalExercise
+key: 14a7c38749
+xp: 100
+```
+
+Now that we understand how to calculate sample estimates by hand, let's learn how to do it using builtin functions.
+
+`@instructions`
+Calculate: `p` - ratio of people whose effect is less or equal to the estimate of the expected value, use `ecdf`. This function returns a function that you can then actually apply to the estimate.
+
+The effects are in the vector `effects`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
+stroop_results <- read.csv(file_uri)
+effects = stroop_results$incongruent - stroop_results$congruent
+```
+
+`@sample_code`
+```{r}
+# probably some code here, but that is up to you.
 p <- # your code here
 ```
 
 `@solution`
 ```{r}
 mu <- mean(effects)
-m <- median(effects)
-sigma2 <- sd(effects)^2
-q1 <- quantile(effects, 0.25)
 p <- ecdf(effects)(mu)
 ```
 
 `@sct`
 ```{r}
-ex() %>% check_correct(
-  check_object(., 'mu') %>% check_equal(),
-  check_object(., 'm') %>% check_equal(),
-  check_object(., 'sigma2') %>% check_equal(),
-  check_object(., 'q1') %>% check_equal(),
-  check_object(., 'p') %>% check_equal()
- )
+ex() %>% check_object('p') %>% check_equal()
+```
+
+---
+
+## Load the mousetracking data
+
+```yaml
+type: NormalExercise
+key: df616aa8f3
+xp: 100
+```
+
+Load the file `mousetracking.csv` into a data.frame. Name it `mt`. The path to the file is in the variable `mt_uri`.
+
+`@instructions`
+
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+```
+
+`@sample_code`
+```{r}
+mt <- # your code here
+```
+
+`@solution`
+```{r}
+mt <- read.csv(mt_uri)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('mt') %>% check_equal()
+```
+
+---
+
+## Find the reaction times
+
+```yaml
+type: NormalExercise
+key: fd3d3f2a2f
+xp: 100
+```
+
+
+
+`@instructions`
+One of the columns in the `mt` data.frame contains reaction times. Save this column into a vector `rt`.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+```
+
+`@sample_code`
+```{r}
+rt <- # your code here
+```
+
+`@solution`
+```{r}
+rt <- mt$rt
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('rt') %>% check_equal()
 ```
