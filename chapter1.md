@@ -1,6 +1,6 @@
 ---
-title: 'Descriptive Statistics'
-description: 'This is a template chapter.'
+title: 'Descriptive Statistics 1'
+description: ""
 ---
 
 ## The Stroop effect
@@ -624,10 +624,10 @@ key: df616aa8f3
 xp: 100
 ```
 
-Load the file `mousetracking.csv` into a data.frame. Name it `mt`. The path to the file is in the variable `mt_uri`.
+
 
 `@instructions`
-
+Load the file `mousetracking.csv` into a data.frame. Name it `mt`. The path to the file is in the variable `mt_uri`.
 
 `@hint`
 
@@ -689,4 +689,276 @@ rt <- mt$rt
 `@sct`
 ```{r}
 ex() %>% check_object('rt') %>% check_equal()
+```
+
+---
+
+## Plot the reaction times
+
+```yaml
+type: NormalExercise
+key: d1ddb7c811
+xp: 100
+```
+
+
+
+`@instructions`
+Plot a scatter plot of reaction times using the function `plot`. Use sequential numbers from 1 to the number of rows in the data.frame for the `x` parameter.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+```
+
+`@sample_code`
+```{r}
+# plot(# add something here)
+```
+
+`@solution`
+```{r}
+N <- nrow(mt)
+plot(1:N, mt$rt)
+```
+
+`@sct`
+```{r}
+ex() %>% check_function('plot') %>% check_arg("x") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("y") %>% check_equal()
+```
+
+---
+
+## Line plot
+
+```yaml
+type: NormalExercise
+key: 644e1dea93
+xp: 100
+```
+
+
+
+`@instructions`
+Now, let's make it a line plot.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+```
+
+`@sample_code`
+```{r}
+
+```
+
+`@solution`
+```{r}
+N <- nrow(mt)
+plot(1:N, mt$rt, type='l')
+```
+
+`@sct`
+```{r}
+ex() %>% check_function('plot') %>% check_arg("x") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("y") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("type") %>% check_equal()
+```
+
+---
+
+## Two line plots
+
+```yaml
+type: NormalExercise
+key: 6d29653aa5
+xp: 100
+```
+
+
+
+`@instructions`
+Add another line plot - with initiation times now. To add a line instead of redrawing the whole plot, use function `lines`. Make its color red (use the actual word _red_ to pass). You won't be able to see much of the new plot because the values of initiation times are much lower. Don't worry - we will fix this in the next exercise.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+```
+
+`@sample_code`
+```{r}
+N <- nrow(mt)
+plot(1:N, mt$rt, type='l')
+# your code here
+```
+
+`@solution`
+```{r}
+N <- nrow(mt)
+plot(1:N, mt$rt, type='l')
+lines(1:N, mt$inittime, col='red')
+```
+
+`@sct`
+```{r}
+ex() %>% check_function('plot') %>% check_arg("x") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("y") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("type") %>% check_equal()
+ex() %>% check_function('lines') %>% check_arg("x") %>% check_equal()
+ex() %>% check_function('lines') %>% check_arg("y") %>% check_equal()
+ex() %>% check_function('lines') %>% check_arg("col") %>% check_equal()
+```
+
+---
+
+## Adjust the y-axis
+
+```yaml
+type: NormalExercise
+key: bb1f5437bd
+xp: 100
+```
+
+
+
+`@instructions`
+Change the y-axis limits. In base-R plotting functions you can do this only by changing the appropriate parameter in the initial `plot` call. Set `y_min` and `y_max` to the minimum and maximum values of both columns subtracting and adding additional 500 ms.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+```
+
+`@sample_code`
+```{r}
+N <- nrow(mt)
+y_min <- # your code here
+y_max <- # your code here
+plot(1:N, mt$rt, type='l')  # add a parameter to this call
+lines(1:N, mt$inittime, col='red')
+```
+
+`@solution`
+```{r}
+N <- nrow(mt)
+y_min <- y_min <- min(min(mt$rt), min(mt$inittime)) - 500
+y_max <- max(max(mt$rt), max(mt$inittime)) + 500
+plot(1:N, mt$rt, type='l', ylim=c(y_min, y_max))  # add a parameter to this call
+lines(1:N, mt$inittime, col='red')
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('y_min') %>% check_equal()
+ex() %>% check_object('y_max') %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("x") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("y") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("type") %>% check_equal()
+ex() %>% check_function('plot') %>% check_arg("ylim") %>% check_equal()
+ex() %>% check_function('lines') %>% check_arg("x") %>% check_equal()
+ex() %>% check_function('lines') %>% check_arg("y") %>% check_equal()
+ex() %>% check_function('lines') %>% check_arg("col") %>% check_equal()
+
+```
+
+---
+
+## Vector preallocation
+
+```yaml
+type: NormalExercise
+key: 0f67609d72
+xp: 100
+```
+
+Whenever you need to calculate a number of things one at a time (which we will in a second) it is almost always a good idea to first create an empty vector that you will then populate (fill with numbers) one value at a time. One way to do this is `rep(NA, size.you.need.for.the.task.in.hand)`.
+
+`@instructions`
+Preallocate an empty vector which will contain sample means based on the first trial, first two trials, etc.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+```
+
+`@sample_code`
+```{r}
+mus <- # your code here
+```
+
+`@solution`
+```{r}
+N <- nrow(mt)
+mus <- rep(NA, N)
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('mus') %>% check_equals()
+```
+
+---
+
+## For loops
+
+```yaml
+type: NormalExercise
+key: cb570074d9
+xp: 100
+```
+
+
+
+`@instructions`
+Populate the preallocated vector `mus` with sample estimates based on the first trial, first two trials, etc.
+
+`@hint`
+
+
+`@pre_exercise_code`
+```{r}
+mt_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/48d111ddf81f417052b7f36051f3aabe0f9e6706/mousetracking.csv'
+mt <- read.csv(mt_uri)
+N <- nrow(mt)
+mus <- rep(NA, N)
+```
+
+`@sample_code`
+```{r}
+for (i in # your code) {
+     # calculate and save one sample mean
+     }
+```
+
+`@solution`
+```{r}
+for (i in 1:N) {
+  mus[i] <- mean(mt$rt[1:i])
+}
+```
+
+`@sct`
+```{r}
+ex() %>% check_object('mus') %>% check_equal()
 ```
