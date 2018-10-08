@@ -43,7 +43,7 @@ In this exercise we will learn to calculate precursors of certain descriptive st
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 ```
 
 ***
@@ -278,7 +278,7 @@ The number of participants and the vector of their Stroop effects (as the differ
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 N <- nrow(stroop_results)
 effects = stroop_results$incongruent - stroop_results$congruent
@@ -325,7 +325,7 @@ Use those, do not use the built-in function that calculates the sample variance.
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 N <- nrow(stroop_results)
 effects = stroop_results$incongruent - stroop_results$congruent
@@ -380,7 +380,7 @@ Free hint: to find the previous integer use `floor`, to find the next one, use `
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 N <- nrow(stroop_results)
 effects = stroop_results$incongruent - stroop_results$congruent
@@ -424,7 +424,7 @@ The effects are in the vector `effects`.
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 effects = stroop_results$incongruent - stroop_results$congruent
 ```
@@ -466,7 +466,7 @@ The effects are in the vector `effects`.
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 effects = stroop_results$incongruent - stroop_results$congruent
 ```
@@ -508,7 +508,7 @@ The effects are in the vector `effects`.
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 effects = stroop_results$incongruent - stroop_results$congruent
 ```
@@ -550,7 +550,7 @@ The effects are in the vector `effects`.
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 effects = stroop_results$incongruent - stroop_results$congruent
 ```
@@ -592,7 +592,7 @@ The effects are in the vector `effects`.
 
 `@pre_exercise_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
+file_uri = 'https://www.dl.dropboxusercontent.com/s/rfjx8bom8hk4tbi/stroop.csv?dl=0'
 stroop_results <- read.csv(file_uri)
 effects = stroop_results$incongruent - stroop_results$congruent
 ```
