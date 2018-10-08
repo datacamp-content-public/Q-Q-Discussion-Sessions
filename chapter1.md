@@ -915,7 +915,7 @@ mus <- rep(NA, N)
 
 `@sct`
 ```{r}
-ex() %>% check_object('mus') %>% check_equals()
+ex() %>% check_object('mus') %>% check_equal()
 ```
 
 ---
