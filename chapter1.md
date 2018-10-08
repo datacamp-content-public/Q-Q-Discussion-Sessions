@@ -167,7 +167,7 @@ Add column `effect` to `stroop_results` that is the difference between RT in the
 
 `@sample_code`
 ```{r}
-file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/e79ff9712f75f5a08381a858ebc17b98bc041a74/stroop.csv'
+file_uri = 'https://assets.datacamp.com/production/repositories/3692/datasets/1ea1e0d892d7b5e191e4ab1acb845d7fbe60f30e/stroop.csv'
 stroop_results <- read.csv(file_uri)
 N <- nrow(stroop_results)
 # your code here
